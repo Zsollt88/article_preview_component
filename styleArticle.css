@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    height: 100vh;
+    background-color: hsl(212, 23%, 69%);
+}
+
+#container {
+    max-width: 800px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+
+
+}
+
+#drawers {
+    max-width: 350px;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+
+}
+
+#textPanel {
+    max-width: 550px;
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+    padding: 30px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+
+}
+
+
+#header,
+#text {
+    padding: 5px;
+
+}
+
+#header {
+    font-weight: 700;
+}
+
+#text {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#bottomText {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#creator {
+    display: flex;
+}
+
+#avatarMichelle {
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+.popUpContainer {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: hsl(214, 17%, 85%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+
+
+}
+
+.popUpContainer:active {
+    background-color: hsl(217, 19%, 35%);
+}
+
+#iconShare {
+    width: 20px;
+    height: 20px;
+}
+
+.popUpText {
+    visibility: hidden;
+    width: 200px;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(214, 17%, 51%);
+    text-align: center;
+    border-radius: 14px;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -100px;
+
+}
+
+.popUpText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent;
+
+}
+
+.popUpContainer .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+#popUpPanel {
+    display: flex;
+    justify-content: space-around;
+}
+
+#shareText {
+    margin-top: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: hsl(212, 23%, 69%);
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width:576px) {
+    body {
+        max-width: 500px;
+        height: 100vh;
+        background-color: hsl(212, 23%, 69%);
+    }
+
+    #container {
+        max-width: 375px;
+        max-height: 100vh;
+        position: relative;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    #drawers {
+        max-width: 375px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+
+    }
+
+    #textPanel {
+        max-width: 375px;
+        background-color: hsl(210, 46%, 95%);
+        font-family: 'Manrope', sans-serif;
+        padding: 30px;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+
+    }
+
+    .popUpContainer {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    .popUpText {
+        visibility: hidden;
+        width: 375px;
+        height: 80px;
+        background-color: hsl(217, 19%, 35%);
+        color: hsl(214, 17%, 51%);
+        text-align: center;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        padding: 20px;
+        position: absolute;
+        left: -215px;
+        bottom: -45px;
+        z-index: -1;
+
+
+    }
+
+    .popUpText::after {
+        content: "";
+        visibility: hidden;
+    }
+
+    .popUpText img {
+        width: 20px;
+        height: 20px;
+        margin-left: 40px;
+    }
+
+    #popUpPanel {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+
+}
